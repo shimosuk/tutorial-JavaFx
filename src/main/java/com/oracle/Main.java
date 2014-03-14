@@ -62,6 +62,9 @@ public class Main extends Application {
         final Text actiontarget = new Text();
         grid.add(actiontarget, 1, 6);
 
+        scenetitle.setFill(Color.FIREBRICK);
+        scenetitle.setId("welcome-text");
+        actiontarget.setId("actiontarget");
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -74,6 +77,8 @@ public class Main extends Application {
 
         Scene scene = new Scene(grid, 300, 275);
         primaryStage.setScene(scene);
+
+        scene.getStylesheets().add(Main.class.getResource("Login.css").toExternalForm());
 
         primaryStage.show();
     }
